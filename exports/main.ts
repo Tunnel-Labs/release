@@ -1,2 +1,2 @@
-export * from '#utils/schema.ts'
-export type * from '#types/release.ts'
+export { releaseSchema } from '#utils/schema.ts';
+export type { Release } from '../types/release.ts';
