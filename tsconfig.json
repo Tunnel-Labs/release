@@ -1,12 +1,12 @@
 {
-	"extends": "lionconfig/tsconfig.json",
+	"extends": "@tunnel/tsconfig",
 	"compilerOptions": {
-		"outDir": "dist",
 		"baseUrl": ".",
-		"rootDir": "src",
-		"paths": {
-			"~/*": ["./src/*"]
-		}
+		"rootDir": "."
 	},
-	"include": ["./src"]
+	"include": [
+		"./exports",
+		"./types",
+		"./utils"
+	]
 }

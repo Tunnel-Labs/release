@@ -1,18 +1,32 @@
 {
 	"name": "@tunnel/release",
-	"root": true,
 	"type": "module",
-	"version": "1.0.0",
-	"exports": "./src/index.ts",
+	"version": "1.0.1",
+	"exports": {
+		"import": {
+			"types": "./.build/main.d.mts",
+			"default": "./.build/main.mjs"
+		},
+		"require": {
+			"types": "./.build/main.d.cts",
+			"default": "./.build/main.cjs"
+		}
+	},
+	"imports": {
+		"#types/*": "./types/*",
+		"#utils/*": "./utils/*"
+	},
 	"scripts": {
-		"build": "tun ./scripts/build.ts"
+		"build": "unbuild"
 	},
 	"dependencies": {
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
-		"@tunnel/tun": "^0.1.3",
-		"lionconfig": "^3.1.1",
-		"typescript": "5.2.2"
+		"@tunnel/tsconfig": "0.0.0",
+		"dprint": "^0.45.0",
+		"tsx": "^4.7.0",
+		"unbuild": "^2.0.0",
+		"typescript": "^5.2.2"
 	}
 }

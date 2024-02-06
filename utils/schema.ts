@@ -5,4 +5,4 @@ import { z } from 'zod';
 
 	These behavior differences must be runtime-only so that the same application can be instantly promoted from green to blue without needing to be rebuilt. For example, `@t/webapp` determines which release to use based on the origin URL of a request instead of a hardcoded environment variable. This also includes applications which are built.
 */
-export const releaseSchema = z.enum(['development', 'staging', 'production']);
+export const releaseSchema = z.enum(['development', 'ci', 'staging', 'production']);
